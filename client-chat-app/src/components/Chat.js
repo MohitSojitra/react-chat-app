@@ -5,6 +5,7 @@ import {Box, Container} from '@material-ui/core'
 import Messages from './Messages'
 import InputMsg from './InputMsg'
 import {makeStyles} from '@material-ui/core/styles'
+import {ENDPOINT} from '../utils/config'
 
 const useStyles = makeStyles(theme => ({
   wrapper: {
@@ -39,7 +40,6 @@ const Chat = ({location}) => {
   const [nickname, setNickname] = useState('')
   const [message, setMessage] = useState('')
   const [messages, setMessages] = useState([])
-  const ENDPOINT = 'http://localhost:3002'
 
   // handling users joining chat
   useEffect(() => {
